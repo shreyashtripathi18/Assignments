@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="inputSection">
+        <h1>Resume Builder</h1>
+        <form id="resumeForm">
+            <div class="form-group">
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <input type="text" id="profession" placeholder="Profession (e.g. Web Developer)" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="address" placeholder="Address" required>
+            </div>
+
+            <h2>Skills</h2>
+            <div id="skills"></div>
+            <button type="button" class="btn" onclick="addSkill()">Add Skill</button>
+
+            <h2>Experience</h2>
+            <div id="experience"></div>
+            <button type="button" class="btn" onclick="addExperience()">Add Experience</button>
+
+            <h2>Education</h2>
+            <div id="education"></div>
+            <button type="button" class="btn" onclick="addEducation()">Add Education</button>
+
+            <button type="submit" class="btn">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resumeSection" class="container hidden">
+        <div id="resume"></div>
+        <div class="btn-group">
+            <button onclick="printResume()" class="btn">Print</button>
+            <button onclick="downloadResume()" class="btn">Download</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

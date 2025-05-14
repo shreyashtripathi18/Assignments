@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ABES ID Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>ABES ID Card Generator</h1>
+
+  <form id="idForm">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="course" placeholder="Course" value="MCA" required>
+    <input type="text" id="admission" placeholder="Admission No." required>
+    <input type="date" id="dob" placeholder="Date of Birth" required>
+    <input type="text" id="blood" placeholder="Blood Group" required>
+    <select id="hostel" required>
+      <option value="Yes">Hostel: Yes</option>
+      <option value="No" selected>Hostel: No</option>
+    </select>
+    <input type="date" id="validity" required>
+    <input type="file" id="photo" accept="image/*" required>
+
+    <button type="submit">Generate ID Card</button>
+  </form>
+
+  <div id="cardSection" style="display:none;">
+    <div id="idCard">
+      <!-- Maroon Header -->
+      <div class="college-header">
+        <img src="abes-logo.jpeg" alt="College Logo" class="college-logo">
+        <div class="college-text">
+          <h2> ABES Engineering College</h2>
+          <p>College Code: 032</p>
+        </div>
+      </div>
+
+      <!-- Student Photo -->
+      <div class="photo-container">
+        <img id="studentPhoto" alt="Student Photo">
+      </div>
+
+      <!-- Student Name and Course -->
+      <div class="student-info">
+        <h3 id="displayName"></h3>
+        <h4 id="displayCourse"></h4>
+      </div>
+
+      <!-- Other Details -->
+      <div class="text-fields">
+        <p><strong>Admission No:</strong> <span id="displayAdmission"></span></p>
+        <p><strong>DOB:</strong> <span id="displayDOB"></span></p>
+        <p><strong>Blood Group:</strong> <span id="displayBlood"></span></p>
+        <p><strong>Hostel:</strong> <span id="displayHostel"></span></p>
+        <p><strong>Validity:</strong> <span id="displayValidity"></span></p>
+      </div>
+
+      <!-- Random Barcode -->
+      <div class="barcode-container">
+        <svg id="barcode"></svg>
+      </div>
+
+    </div>
+
+    <button id="downloadBtn">Download ID Card</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

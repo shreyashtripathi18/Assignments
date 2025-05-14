@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Professional Marksheet Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="inputSection">
+  <h1>Enter Student Details</h1>
+  <form id="marksForm">
+    <div class="form-group">
+      <input type="text" id="schoolName" placeholder="School Name" required>
+      <input type="text" id="schoolAddress" placeholder="School Address" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="session" placeholder="Session (e.g. 2024-25)" required>
+      <input type="text" id="class" placeholder="Class" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="studentName" placeholder="Student Name" required>
+      <input type="text" id="fatherName" placeholder="Father's Name" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="motherName" placeholder="Mother's Name" required>
+      <input type="text" id="rollNo" placeholder="Roll Number" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="admissionNo" placeholder="Admission Number" required>
+      <input type="text" id="dob" placeholder="Date of Birth (e.g. 23-Aug-2000)" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="address" placeholder="Address" required>
+    </div>
+
+    <h2>Subjects Entry</h2>
+    <div id="subjects"></div>
+    <button type="button" class="btn" onclick="addSubject()">Add Subject</button>
+    <button type="submit" class="btn">Generate Marksheet</button>
+  </form>
+</div>
+
+<div id="marksheetSection" class="container hidden">
+  <div id="marksheet"></div>
+  <div class="btn-group">
+    <button onclick="printMarksheet()" class="btn">Print</button>
+    <button onclick="downloadMarksheet()" class="btn">Download</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

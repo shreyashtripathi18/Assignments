@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 450px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+form input, form select, form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+#idCard {
+  width: 320px;
+  height: auto;
+  border: 2px solid #333;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.college-header {
+  background-color: maroon;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  border-radius: 8px 8px 0 0;
+}
+
+.college-logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.college-text h2, .college-text p {
+  margin: 5px 0 0 0;
+}
+
+.photo-container {
+  margin-top: 20px;
+  width: 100px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #000;
+  overflow: hidden;
+  background: #eee;
+}
+
+#studentPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student-info {
+  margin-top: 10px;
+}
+
+.student-info h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.student-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  color: #555;
+}
+
+.text-fields {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.text-fields p {
+  margin: 4px 0;
+}
+
+.barcode-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#barcode {
+  width: 250px;
+  height: 50px;
+}
+
+#downloadBtn {
+  margin-top: 20px;
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#downloadBtn:hover {
+  background: #218838;
+}
